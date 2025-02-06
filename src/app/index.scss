@@ -1,3 +1,144 @@
-// .page-home {
- 
-// }
+.page-home {
+  color: white;
+  background: #282828;
+
+  main {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 120px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #282828;
+    padding: 12px;
+
+    button {
+      font-size: 22px;
+      border: 1px solid #fff;
+      background-color: #5e5e5e;
+      color: white;
+      font-weight: 500;
+      padding: 20px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    img {
+      cursor: grab;
+      border: 1px solid #5e5e5e;
+      max-height: 98%;
+      max-width: 98%;
+
+      &:active {
+        cursor: grabbing;
+      }
+    }
+  }
+
+  .toggle-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 4px;
+    bottom: 132px;
+    z-index: 3;
+    width: 50px;
+    height: 20px;
+    border-radius: 4px 4px 0 0;
+    font-size: 12px;
+    font-weight: 300;
+    background-color: #5e5e5e;
+    color:white;
+    cursor: pointer;
+
+    &.hidden {
+      bottom: 2px;
+    }
+  }
+
+  nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    height: 132px;
+    background: #3c3c3c;
+    border-top: 1px solid #5e5e5e;
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding: 0 calc(50vw - 50px);
+
+    &.hidden {
+      transform: translateY(calc(100% - 2px));
+    }
+
+    &::-webkit-scrollbar {
+      -webkit-appearance: none;
+      height: 8px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      background-color: rgba(0, 0, 0, .5);
+      // box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+    }
+
+    .container {
+      position: relative;
+      margin: 0 8px;
+      width: 100px;
+      height: 100px;
+      flex: 1;
+
+      &:first-child {
+        margin-left: 0px;
+      }
+
+      &:last-child {
+        margin-right: 0px;
+      }
+
+      .delete {
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        height: 16px;
+        width: 16px;
+        font-size: 8px;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        border-radius: 50%;
+
+        &.to-remove {
+          background-color: red;
+        }
+      }
+
+      img {
+        border: 1px solid #5e5e5e;
+        height: 100px;
+        width: 100px;
+        object-fit: contain;
+        cursor: pointer;
+      }
+
+      &.active {
+        img {
+          border: 2px solid #7cacf8;
+        }
+      }
+    }
+  }
+}

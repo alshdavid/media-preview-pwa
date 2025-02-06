@@ -4,5 +4,6 @@ import * as preact from 'preact'
 import { App } from './app/index.js'
 
 void async function main() {
-    preact.render(<App/>, document.getElementById('root')!)
+  preact.render(<App/>, document.querySelector('body')!)
 }()
+

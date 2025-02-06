@@ -16,11 +16,15 @@ const Paths = {
   Vendor: path.join(__dirname, "src", "vendor"),
   Static: path.join(__dirname, "src", "static"),
   Robots: path.join(__dirname, "src", "robots.txt"),
+  Manifest: path.join(__dirname, "src", "manifest.json"),
+  ServiceWorker: path.join(__dirname, "src", "service-worker.js"),
   Styles: path.join(__dirname, "src", "index.scss"),
   Output: path.join(__dirname, "dist"),
   OutputVendor: path.join(__dirname, "dist", "vendor"),
   OutputStatic: path.join(__dirname, "dist", "static"),
   OutputRobots: path.join(__dirname, "dist", "robots.txt"),
+  OutputManifest: path.join(__dirname, "dist", "manifest.json"),
+  OutputServiceWorker: path.join(__dirname, "dist", "service-worker.js"),
 };
 
 fs.rmSync(Paths.Output, { recursive: true, force: true });
@@ -95,6 +99,8 @@ fs.writeFileSync(path.join(Paths.Output, 'meta.json'), JSON.stringify(report.met
 fs.cpSync(Paths.Vendor, Paths.OutputVendor, { recursive: true });
 fs.cpSync(Paths.Static, Paths.OutputStatic, { recursive: true });
 fs.cpSync(Paths.Robots, Paths.OutputRobots, { recursive: true });
+fs.cpSync(Paths.Manifest, Paths.OutputManifest, { recursive: true });
+fs.cpSync(Paths.ServiceWorker, Paths.OutputServiceWorker, { recursive: true });
 
 const ctx = {
   scripts,

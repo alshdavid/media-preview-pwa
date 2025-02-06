@@ -9,15 +9,16 @@
   "devDependencies": {
     "@types/node": "*",
     "ejs": "*",
-    "typescript": "*",
-    "sass": "*",
-    "esbuild-sass-plugin": "*",
     "esbuild": "*",
-    "prettier": "*",
+    "esbuild-sass-plugin": "*",
     "nodemon": "*",
-    "tsx": "*"
+    "prettier": "*",
+    "sass": "*",
+    "tsx": "*",
+    "typescript": "*"
   },
   "dependencies": {
+    "crc": "^4.3.2",
     "preact": "*"
   },
   "nodemonConfig": {

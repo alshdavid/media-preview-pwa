@@ -7,18 +7,11 @@
     <link rel="shortcut icon"type="image/x-icon" href="data:image/x-icon;,">
     <title>Media Preview</title>
     <base href="<%- ctx.base_href %>" />
+    <link rel="manifest" href="manifest.json" />
     <link rel="stylesheet" href="<%- ctx.styles.get('index.css') %>">
+    <script src='https://unpkg.com/panzoom@9.4.0/dist/panzoom.min.js'></script>
+    <script type="module" defer async src="<%- ctx.scripts.get('index.js') %>"></script>
 </head>
 <body class="page-home">
-  <!-- Placed in the body for better SEO -->
-  <header class="content-max-width">
-    <div>
-      <h1>Media Preview</h1>
-    </div>
-  </header>
-  <main class="content-max-width">
-    <div id="root"></div>
-    <script type="module" src="<%- ctx.scripts.get('index.js') %>"></script>
-  </main>
 </body>
 </html>

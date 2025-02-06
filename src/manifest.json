@@ -1,0 +1,10 @@
+{
+  "name": "Image Preview",
+  "short_name": "Image Preview",
+  "description": "Simple Image Preview App",
+  "icons": [],
+  "start_url": "/index.html",
+  "display": "fullscreen",
+  "theme_color": "#1f2020",
+  "background_color": "#1f2020"
+}

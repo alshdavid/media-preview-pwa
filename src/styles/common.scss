@@ -11,5 +11,10 @@
 }
 
 body {
-  margin: var(--spacing-14) 0;
+  display: flex;
+  min-height: 100vh;
+}
+
+#id {
+  display: contents;
 }
