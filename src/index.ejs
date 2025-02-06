@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon"type="image/x-icon" href="data:image/x-icon;,">
+    <title>Media Preview</title>
+    <base href="<%- ctx.base_href %>" />
+    <link rel="stylesheet" href="<%- ctx.styles.get('index.css') %>">
+</head>
+<body class="page-home">
+  <!-- Placed in the body for better SEO -->
+  <header class="content-max-width">
+    <div>
+      <h1>Media Preview</h1>
+    </div>
+  </header>
+  <main class="content-max-width">
+    <div id="root"></div>
+    <script type="module" src="<%- ctx.scripts.get('index.js') %>"></script>
+  </main>
+</body>
+</html>

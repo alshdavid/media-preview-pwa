@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "moduleResolution": "NodeNext",
+        "module": "NodeNext",
+        "target": "ESNext",
+        "lib": ["DOM", "ESNext"],
+        "strict": true,
+        "jsx": "react",
+        "experimentalDecorators": true,
+        "jsxFactory": "h"
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+      "node_modules/**/*"
+    ]
+}

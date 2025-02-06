@@ -1,0 +1,37 @@
+{
+  "name": "@alshdavid/statement-converter",
+  "type": "module",
+  "scripts": {
+    "build": "node --import tsx ./build.ts",
+    "watch": "npx nodemon",
+    "serve": "http-server-rs --spa --watch ./dist"
+  },
+  "devDependencies": {
+    "@types/node": "*",
+    "ejs": "*",
+    "typescript": "*",
+    "sass": "*",
+    "esbuild-sass-plugin": "*",
+    "esbuild": "*",
+    "prettier": "*",
+    "nodemon": "*",
+    "tsx": "*"
+  },
+  "dependencies": {
+    "preact": "*"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "**/node_modules/**",
+      "**/.git/**",
+      "**/dist/**"
+    ],
+    "watch": [
+      "src/**/*"
+    ],
+    "ext": "*",
+    "delay": 250,
+    "signal": "SIGTERM",
+    "exec": "npm run build"
+  }
+}
